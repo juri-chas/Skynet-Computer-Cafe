@@ -20,7 +20,17 @@
     <div class="loading-text">0%</div>
 
     <!-- Scripts -->
-    <script src="spaceBackground.js"></script>
+<script src="spaceBackground.js" id="spaceScript"></script>
+<script>
+  const DELAY_MS = 5000; // ändra tiden här
+  document.getElementById('spaceScript').addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.src = 'blurryLoading.js';
+      document.body.appendChild(s); // eller document.head.appendChild(s);
+    }, DELAY_MS);
+  });
+</script>
     <script src="blurryLoading.js"></script>
 
     <!-- Placeholder för HTML -->
