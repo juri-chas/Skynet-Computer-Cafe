@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+/* "Doesnt hurt if you have flexdirection, but we dont need it."*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+/* Background loading picture URL, but unstread to spaceBackground*/
+.bg { 
+    position: absolute;
+    top: -30;
+    left: -30;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px);
+}
+.gb canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.loading-text {
+    font-size: 50px;
+    color: #fff;
+}
+
+#backgroundCanvas{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  overflow: hidden;
+  z-index: 1;
+  background: radial-gradient(#100826,#060212);
+}
+#starsCanvas{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  overflow: hidden;
+  z-index: 2;
+  background-color: transparent;
+}
+#milkyWayCanvas{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  object-fit:contain;
+  overflow: hidden;
+  z-index: 1;
+  filter: blur(0px);
+}
