@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <section id="shop" class="section alt">
+      <div class="container">
+        <h2>cafe</h2>
+        <p class="muted">Intäkter går till NASA.</p>
+        <div class="grid products" role="list">
+          <article class="card product" role="listitem">
+            <img src="https://stevenyberg.com/wp-content/uploads/2014/04/bmb.jpg?w=650" alt="Fluffig bulle med chokladboll inuti" loading="lazy">
+            <div class="p-16">
+              <h3 class="product-title">Rymdbulle</h3>
+              <p class="price" data-price="49">49 kr</p>
+              <button class="btn add-to-cart" data-product='{"id":"bulle","name":"Rymdbulle","price":49}'>Lägg i varukorg</button>
+            </div>
+          </article>
+
+          <article class="card product" role="listitem">
+            <img src="https://cdn-ildekep.nitrocdn.com/yClOYnTXyRTcVCRvaTNGDYmjCuCQTOtI/assets/images/optimized/rev-2971860/humboldtseedcompany.com/wp-content/uploads/2025/07/Cannabis-space-cake-recipe-1024x682.jpg" alt="Bomullskasse med grön logotyp" loading="lazy">
+            <div class="p-16">
+              <h3 class="product-title">Chokladkaka</h3>
+              <p class="price" data-price="99">99 kr</p>
+              <button class="btn add-to-cart" data-product='{"id":"kasse","name":"Chokladkaka","price":99}'>Lägg i varukorg</button>
+            </div>
+          </article>
+
+          <article class="card product" role="listitem">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsfoLKiHZt-hh18GZlPHXLi4ySnARgWoC2hGpgBSc6DrCGqcEnGzNa-GTaUwMiMW53xzc&usqp=CAU" alt="Startkit med tre fröpåsar" loading="lazy">
+            <div class="p-16">
+              <h3 class="product-title">Rymdglass</h3>
+              <p class="price" data-price="59">59 kr</p>
+              <button class="btn add-to-cart" data-product='{"id":"glass","name":"rymdglass","price":59}'>Lägg i varukorg</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+            <article class="card product" role="listitem">
+            <img src="https://www.infernoonline.com/api/media/file/img_4-4.webp" alt="Startkit med tre fröpåsar" loading="lazy">
+            <div class="p-16">
+              <h3 class="product-title">Nattgib</h3>
+              <p class="price" data-price="250">250kr</p>
+              <button class="btn add-to-cart" data-product='{"id":"nattgib","name":"nattgib","price":250}'>Lägg i varukorg</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <article class="card product" role="listitem">
+            <img src="https://www.shutterstock.com/image-vector/1hours-icon-symbol-black-time-260nw-2184492657.jpg" alt="Startkit med tre fröpåsar" loading="lazy">
+            <div class="p-16">
+              <h3 class="product-title">1 timme</h3>
+              <p class="price" data-price="59">59 kr</p>
+              <button class="btn add-to-cart" data-product='{"id":"1 timme","n´name":"1 timme","price":59}'>Lägg i varukorg</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <article class="card product" role="listitem">
+            <img src="https://www.shutterstock.com/image-illustration/10h-gold-3d-illustration-on-260nw-2655060087.jpg" alt="Startkit med tre fröpåsar" loading="lazy">
+            <div class="p-16">
+              <h3 class="product-title">10h</h3>
+              <p class="price" data-price="259">259 kr</p>
+              <button class="btn add-to-cart" data-product='{"id":"10h","name":"10h","price":259}'>Lägg i varukorg</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <article class="card product" role="listitem">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTOppGiZAMS8RlGCaF1y9LZjxIuHdyWAipQ&s" alt="Startkit med tre fröpåsar" loading="lazy">
+            <div class="p-16">
+              <h3 class="product-title">100h</h3>
+              <p class="price" data-price="1290">1290 kr</p>
+              <button class="btn add-to-cart" data-product='{"id":"100h","name":"100h","price":1290}'>Lägg i varukorg</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <aside id="cartPanel" class="cart-panel" aria-hidden="true" aria-labelledby="openCartBtn" tabindex="-1">
+      <div class="cart-panel-inner">
+        <h2>Din varukorg</h2>
+        <div id="cartItems" class="cart-items" aria-live="polite"></div>
+        <div class="cart-total">
+          <span>Totalt:</span>
+          <strong id="cartTotal">0 kr</strong>
+        </div>
+        <div class="cart-actions">
+          <button id="checkoutBtn" class="btn primary">Till kassan (demo)</button>
+          <button id="clearCartBtn" class="btn ghost">Töm</button>
+          <button id="closeCartBtn" class="btn ghost">Stäng</button>
+        </div>
+      </div>
+    </aside>
+
+    <section id="todo" class="section">
+      <div class="container">
+        <h2>Önskelista</h2>
+        <form id="todoForm" class="todo-form" novalidate>
+          <div class="field">
+            <label for="todoInput">Lägg till punkt</label>
+            <input id="todoInput" name="todo" type="text" required minlength="2" placeholder="t.ex. Lämna elskrot på återvinningen" aria-describedby="todoHelp">
+            <p id="todoHelp" class="muted">Sparas lokalt i din webbläsare.</p>
+          </div>
+          <button class="btn secondary">Lägg till</button>
+        </form>
+
+        <ul id="todoList" class="todo-list"></ul>
+        <button id="clearTodosBtn" class="btn ghost">Rensa alla</button>
+      </div>
+    </section>
+
+
+
+</body>
+</html>
