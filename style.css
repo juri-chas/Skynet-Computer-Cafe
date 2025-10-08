@@ -13,12 +13,14 @@ body, html {
   overflow-y: auto;   
 }
 
-
-
-
-
-
-
+:root {
+  --btn-bg: #007bff;        /* blå bakgrund */
+  --btn-bg-hover: #0056b3;  /* mörkare vid hover */
+  --btn-text: #ffffff;      /* vit text */
+  --btn-radius: 10px;       /* rundade hörn */
+  --btn-padding: 12px 24px; /* standardstorlek */
+  --btn-font: 'Ubuntu', sans-serif;
+}
 
 /* Background loading picture URL, but unstread to spaceBackground*/
 .bg { 
