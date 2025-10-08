@@ -105,26 +105,30 @@ position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, alpha0.9);
+    width: min(90vw, 900px);
+    height: min(70vh, 600px);
+    background: rgba(255, 255, 255, 0.548);
     padding: 2rem 3rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(125, 109, 109, 0.2);
     z-index: 1; /* ovanför bakgrunden */
     text-align: center;
     max-width: 90%;
-    background-color: rbga(white, alpha 0.9)
-}
+    background-color: rgba(white, 0.9)
+    backdrop-filter: blur(1px); /* frostat glas-effekt */
+
+  }
 
 .center-box h1 {
 
 }
 
 .center-box button {
-  margin-top: 1rem;
-  padding: 0.7rem 1.5;
+  margin-top: 0rem;
+  padding: 0rem 0;
   border: none;
-  border-radius: 8;
-  background: #007bff;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.274); /* genomskinlig vit */
   color: white;
   cursor: pointer;
 }
@@ -134,14 +138,5 @@ position: absolute;
 
 
 
-
-.opacityContent {
-  position: absolute;
-  width: 60%;
-  height: 60%;
-  background: rgba(255, 255, 255, 0.2); /* genomskinlig vit */
-  backdrop-filter: blur(8px); /* frostat glas-effekt */
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-  z-index: 1;
+  
 }
