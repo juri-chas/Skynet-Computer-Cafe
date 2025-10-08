@@ -11,12 +11,11 @@
     <!-- Centrerad ruta med frosted glass och iframe -->
     <div class="center-box">
         <div class="frosted-bg"></div>
-        <iframe 
-            id="overlayFrame" 
-            src="index2.html" 
-            title="Overlay"
-            frameborder: "0"
-        ></iframe>
+        <h1 id="welcome-title">Välkommen till Skynet Computer Cafe!</h1>
+        <p>Allt innehåll här ligger ovanpå bakgrunden.</p>
+        <a href="home.html">Hem</a>
+        <a href="meny.html">Meny</a>
+        <a href="kontakt.html">Kontakt</a>
     </div>
 
     <!-- Blurry Loading -->
@@ -30,7 +29,7 @@
     <!-- Scripts -->
     <script src="spaceBackground.js" id="spaceScript"></script>
     <script>
-      const DELAY_MS = 5000;
+      const DELAY_MS = 1000;
       document.getElementById('spaceScript').addEventListener('load', function () {
         setTimeout(function () {
           var s = document.createElement('script');

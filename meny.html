@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Skynet Computer Cafe</title>
 </head>
 <body>
-    
+
+    <!-- Centrerad ruta med frosted glass och iframe -->
+    <div class="center-box">
+        <div class="frosted-bg"></div>
+        <h1 id="welcome-title">Välkommen till Skynet Computer Cafe!</h1>
+        <p>Allt innehåll här ligger ovanpå bakgrunden.</p>
+        <a href="home.html">Hem</a>
+        <a href="meny.html">Meny</a>
+        <a href="kontakt.html">Kontakt</a>
+        
 
     <section id="shop" class="section alt">
       <div class="container">
@@ -129,6 +139,29 @@
 
 
     <script src="localStorage.js"></script>
+    </div>
+
+    <!-- Blurry Loading -->
+    <section class="bg">
+        <canvas id="backgroundCanvas"></canvas>
+        <canvas id="starsCanvas"></canvas>
+        <canvas id="milkyWayCanvas"></canvas>
+    </section>
+    <div class="loading-text">0%</div>
+
+    <!-- Scripts -->
+    <script src="spaceBackground.js" id="spaceScript"></script>
+    <script>
+      const DELAY_MS = 1000;
+      document.getElementById('spaceScript').addEventListener('load', function () {
+        setTimeout(function () {
+          var s = document.createElement('script');
+          s.src = 'blurryLoading.js';
+          document.body.appendChild(s);
+        }, DELAY_MS);
+      });
+    </script>
+    <script src="blurryLoading.js"></script>
 
 </body>
 </html>

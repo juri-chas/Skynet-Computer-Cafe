@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-@media screen and (max-width: 400px) {
-  img {
-    height: 200px;
-  }
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -13,26 +7,29 @@
 }
 
 body, html {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-body.overlay-body {
-    background: transparent;
-    margin: 0;
-    font-family: 'Ubuntu', sans-serif;
-}
-/* Background */
+
+
+
+
+
+
+
+/* Background loading picture URL, but unstread to spaceBackground*/
 .bg { 
     position: absolute;
-    top: -30px;
-    left: -30px;
+    top: -30;
+    left: -30;
     width: calc(100vw + 60px);
     height: calc(100vh + 60px);
     z-index: -1;
+    filter: blur(0px);
 }
-.bg canvas {
+.gb canvas {
     position: absolute;
     top: 0;
     left: 0;
@@ -42,67 +39,106 @@ body.overlay-body {
 }
 
 #backgroundCanvas{
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    z-index: 1;
-    background: radial-gradient(#100826,#060212);
-}
-#starsCanvas{
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: transparent;
-}
-#milkyWayCanvas{
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: transparent;
-    filter: blur(0px);
-}
-
-
-/* Frosted glass som ligger under iframe inuti .center-box */
-.center-box .frosted-bg {
+  top: 0;
+  left: 0;
   position: absolute;
-  inset: 0;                   /* top:0; right:0; bottom:0; left:0; */
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: inherit;
-  z-index: 1;
-}
-
-.frosted-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.1);
-    -w
-}
-
-/* Iframe som FILLER endast .center-box — inte viewport */
-.center-box > iframe {
-  position: relative;         /* viktigt: inte fixed */
-  display: block;
   width: 100%;
   height: 100%;
-  border: none;               /* ingen ram */
-  margin: 0;
-  padding: 0;
-  z-index: 2;                 /* ovanför frosted-bg */
-  background: transparent;
-  overflow: auto;             /* låt innehållet scrolla inom rutan */
+  object-fit:contain;
+  overflow: hidden;
+  z-index: 1;
+  background: radial-gradient(#100826,#060212);
+}
+#starsCanvas{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  overflow: hidden;
+  z-index: 2;
+  background-color: transparent;
+}
+#milkyWayCanvas{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  object-fit:contain;
+  overflow: hidden;
+  z-index: 1;
+  filter: blur(0px);
+}
+
+
+
+
+/*old body backup
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+/* "Doesnt hurt if you have flexdirection, but we dont need it."*/
+/*    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+*/
+/* ChatGPT lägga en centrerad ruta framför animerad bakgrund i javascript*/
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Längst bak*/
+
+}
+
+.center-box {
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90vw, 900px);
+    height: min(70vh, 600px);
+    background: rgba(0, 255, 30, 0.469);
+    backdrop-filter: blur(1px); /* frostat glas-effekt */
+    border-radius: 20px;
+    padding: 2rem 3rem;
+
+    box-shadow: 0 10px 30px rgba(125, 109, 109, 0.2);
+    z-index: 1; /* ovanför bakgrunden */
+    text-align: center;
+    max-width: 90%;
+   
+  }
+
+#welcome-title {
+  width: 100%;
+  background-color: red;
+}
+
+
+.center-box button {
+  margin-top: 0rem;
+  padding: 0rem 0;
+  border: none;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.274); /* genomskinlig vit */
+  color: white;
+  cursor: pointer;
+}
+.center-box button:hover {
+  background: #0056b3;
+}
+
+
+
+  
 }
