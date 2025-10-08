@@ -41,29 +41,40 @@
 
     <section id="shop" class="section alt">
       <div class="container">
-        <h2>cafe</h2>
-        <p class="muted">Intäkter går till NASA.</p>
+        <h2>Café</h2>
+        <p class="muted">1% av intäkterna går till NASA.</p>
         <div class="grid products" role="list">
-          <article class="card product" role="listitem">
+          <div class="card">
+            <article class="card product" role="listitem">
+            <div class="image-frame">
             <img src="https://stevenyberg.com/wp-content/uploads/2014/04/bmb.jpg?w=650" alt="Fluffig bulle med chokladboll inuti" loading="lazy">
+            </div>
             <div class="p-16">
               <h3 class="product-title">Rymdbulle</h3>
               <p class="price" data-price="49">49 kr</p>
               <button class="btn add-to-cart" data-product='{"id":"bulle","name":"Rymdbulle","price":49}'>Lägg i varukorg</button>
             </div>
           </article>
+          </div>
 
+            <div class="card">
           <article class="card product" role="listitem">
-            <img src="https://cdn-ildekep.nitrocdn.com/yClOYnTXyRTcVCRvaTNGDYmjCuCQTOtI/assets/images/optimized/rev-2971860/humboldtseedcompany.com/wp-content/uploads/2025/07/Cannabis-space-cake-recipe-1024x682.jpg" alt="Bomullskasse med grön logotyp" loading="lazy">
+            <div class="image-frame">
+              <img src="https://cdn-ildekep.nitrocdn.com/yClOYnTXyRTcVCRvaTNGDYmjCuCQTOtI/assets/images/optimized/rev-2971860/humboldtseedcompany.com/wp-content/uploads/2025/07/Cannabis-space-cake-recipe-1024x682.jpg" alt="Bomullskasse med grön logotyp" loading="lazy">
+              </div>
             <div class="p-16">
               <h3 class="product-title">Chokladkaka</h3>
               <p class="price" data-price="99">99 kr</p>
               <button class="btn add-to-cart" data-product='{"id":"kasse","name":"Chokladkaka","price":99}'>Lägg i varukorg</button>
             </div>
           </article>
+          </div>
 
+          <div class="card">
           <article class="card product" role="listitem">
+            <div class="image-frame">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsfoLKiHZt-hh18GZlPHXLi4ySnARgWoC2hGpgBSc6DrCGqcEnGzNa-GTaUwMiMW53xzc&usqp=CAU" alt="Startkit med tre fröpåsar" loading="lazy">
+            </div>
             <div class="p-16">
               <h3 class="product-title">Rymdglass</h3>
               <p class="price" data-price="59">59 kr</p>
@@ -73,9 +84,13 @@
         </div>
       </div>
     </section>
+    </div>
     
+            <div class="card">
             <article class="card product" role="listitem">
+              <div class="image-frame">
             <img src="https://www.infernoonline.com/api/media/file/img_4-4.webp" alt="Startkit med tre fröpåsar" loading="lazy">
+            </div>
             <div class="p-16">
               <h3 class="product-title">Nattgib</h3>
               <p class="price" data-price="250">250kr</p>
@@ -84,23 +99,32 @@
           </article>
         </div>
       </div>
+      </div>
     </section>
+      </div>
 
+    <div class="card">
     <article class="card product" role="listitem">
+      <div class="image-frame">
             <img src="https://www.shutterstock.com/image-vector/1hours-icon-symbol-black-time-260nw-2184492657.jpg" alt="Startkit med tre fröpåsar" loading="lazy">
+            </div>
             <div class="p-16">
               <h3 class="product-title">1 timme</h3>
               <p class="price" data-price="59">59 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"1 timme","n´name":"1 timme","price":59}'>Lägg i varukorg</button>
+              <button class="btn add-to-cart" data-product='{"id":"1 timme","name":"1 timme","price":59}'>Lägg i varukorg</button>
             </div>
           </article>
         </div>
+        </div
       </div>
     </section>
+      </div>
 
-
+<div class="card">
     <article class="card product" role="listitem">
+      <div class="image-frame">
             <img src="https://www.shutterstock.com/image-illustration/10h-gold-3d-illustration-on-260nw-2655060087.jpg" alt="Startkit med tre fröpåsar" loading="lazy">
+            </div>
             <div class="p-16">
               <h3 class="product-title">10h</h3>
               <p class="price" data-price="259">259 kr</p>
@@ -109,11 +133,15 @@
           </article>
         </div>
       </div>
+      </div>
     </section>
+      </div>
 
-
+<div class="card">
     <article class="card product" role="listitem">
+      <div class="image-frame">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTOppGiZAMS8RlGCaF1y9LZjxIuHdyWAipQ&s" alt="Startkit med tre fröpåsar" loading="lazy">
+            </div>
             <div class="p-16">
               <h3 class="product-title">100h</h3>
               <p class="price" data-price="1290">1290 kr</p>
@@ -122,8 +150,8 @@
           </article>
         </div>
       </div>
+    </div>
     </section>
-
 
     <aside id="cartPanel" class="cart-panel" aria-hidden="true" aria-labelledby="openCartBtn" tabindex="-1">
       <div class="cart-panel-inner">
@@ -161,6 +189,74 @@
 
     <script src="localStorage.js"></script>
     </div>
+<script>
+  // :shopping_trolley: Skapa en tom varukorg
+  let cart = [];
+  const cartItemsContainer = document.getElementById("cartItems");
+  const cartTotalElement = document.getElementById("cartTotal");
+  const clearCartBtn = document.getElementById("clearCartBtn");
+  // :white_check_mark: Ladda varukorg från localStorage när sidan öppnas
+  document.addEventListener("DOMContentLoaded", () => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      cart = JSON.parse(storedCart);
+      updateCart();
+    }
+  });
+  // :white_check_mark: Lägg till event på alla "Lägg i varukorg"-knappar
+  document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+      const product = JSON.parse(button.getAttribute("data-product"));
+      addToCart(product);
+    });
+  });
+  // :white_check_mark: Lägg till produkt i varukorgen och spara
+  function addToCart(product) {
+    const existingItem = cart.find(item => item.id === product.id);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      product.quantity = 1;
+      cart.push(product);
+    }
+    saveCart();
+    updateCart();
+  }
+  // :white_check_mark: Uppdatera varukorgens innehåll i sidpanelen
+  function updateCart() {
+    cartItemsContainer.innerHTML = "";
+    let total = 0;
+    cart.forEach(item => {
+      const itemTotal = item.price * item.quantity;
+      total += itemTotal;
+      const div = document.createElement("div");
+      div.classList.add("cart-item");
+      div.innerHTML = `
+        <p>${item.name} x ${item.quantity} – ${itemTotal} kr</p>
+      `;
+      cartItemsContainer.appendChild(div);
+    });
+    cartTotalElement.textContent = `${total} kr`;
+  }
+  // :white_check_mark: Spara nuvarande varukorg i localStorage
+  function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+  // :white_check_mark: Töm varukorgen helt
+  clearCartBtn.addEventListener("click", () => {
+    cart = [];
+    localStorage.removeItem("cart");
+    updateCart();
+  });
+  // :white_check_mark: Demo: töm varukorgen vid "Till kassan"
+  document.getElementById("checkoutBtn").addEventListener("click", () => {
+    alert("Tack för ditt köp :rocket:");
+    cart = [];
+    localStorage.removeItem("cart");
+    updateCart();
+  });
+</script>
+    </section>
 
 
 </body>
