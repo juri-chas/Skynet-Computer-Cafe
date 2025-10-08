@@ -1,0 +1,1 @@
+document.getElementById('cartPanel').setAttribute('aria-hidden', 'false');
