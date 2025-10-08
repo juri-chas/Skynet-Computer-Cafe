@@ -107,7 +107,7 @@ position: absolute;
     transform: translate(-50%, -50%);
     width: min(90vw, 900px);
     height: min(70vh, 600px);
-    background: rgba(0, 255, 30, 0.469);
+    background: rgba(255, 255, 255, 0.469);
     backdrop-filter: blur(1px); /* frostat glas-effekt */
     border-radius: 20px;
     padding: 2rem 3rem;
@@ -121,7 +121,6 @@ position: absolute;
 
 #welcome-title {
   width: 100%;
-  background-color: red;
 }
 
 
