@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<section id="feedback" class="section">
+      <div class="container">
+        <h2>Feedback</h2>
+        <p>Berätta vad du tycker. Fält markerade med * är obligatoriska.</p>
+        <form id="feedbackForm" class="feedback-form" novalidate>
+          <div class="field">
+            <label for="name">Namn *</label>
+            <input id="name" name="name" type="text" required minlength="2" autocomplete="name">
+          </div>
+
+          <div class="field">
+            <label for="email">E-post *</label>
+            <input id="email" name="email" type="email" required inputmode="email" autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="message">Meddelande *</label>
+            <textarea id="message" name="message" required minlength="10" rows="5"></textarea>
+          </div>
+
+          <fieldset class="field">
+            <legend>Prenumerera på nyheter?</legend>
+            <div class="choice">
+              <input type="radio" id="subYes" name="subscribe" value="yes">
+              <label for="subYes">Ja tack</label>
+            </div>
+            <div class="choice">
+              <input type="radio" id="subNo" name="subscribe" value="no" checked>
+              <label for="subNo">Nej</label>
+            </div>
+          </fieldset>
+
+          <div class="actions">
+            <button class="btn primary" type="submit">Skicka</button>
+            <button class="btn ghost" type="reset">Rensa</button>
+          </div>
+
+          <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Skynet Computer cafe. <a href="#feedback">Kontakta oss</a>.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
+
+
+</body>
+</html>
