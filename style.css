@@ -108,10 +108,11 @@ position: absolute;
     background: rgba(255, 255, 255, alpha0.9);
     padding: 2rem 3rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(125, 109, 109, 0.2);
     z-index: 1; /* ovanför bakgrunden */
     text-align: center;
     max-width: 90%;
+    background-color: rbga(white, alpha 0.9)
 }
 
 .center-box h1 {
