@@ -169,21 +169,12 @@ gap: 20px;
 
 .p-16 {
   flex: 1;
-  background-color: red;
+  background-color: rgba(168, 168, 168, 0.408);
   min-width: 250px; /* ← texten får aldrig vara smalare än så */
   color: white;
   line-height: 1.5;
 }
   
-}/*
- .card img {
-      width: 40%;
-      height: 200px;
-      object-fit: cover;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      display: center;*/
-
 
 #background {
   position: fixed;
@@ -217,7 +208,6 @@ position: absolute;
 #welcome-title {
   width: 100%;
 } 
-
 
 .center-box button {
   margin-top: 0rem;
