@@ -8,42 +8,39 @@
 </head>
 <body>
 
+    <!-- Knappar -->
+        <nav class="menu-buttons">
+          <a href="home.html" class="btn">Hem</a>
+          <a href="meny.html" class="btn">Meny</a>
+          <a href="kontakt.html" class="btn">Kontakt</a>
+        </nav>
+    </div>
+
     <!-- Centrerad ruta med frosted glass och iframe -->
     <div class="center-box">
         <div class="frosted-bg"></div>
         <h1 id="welcome-title">Välkommen till Skynet Computer Cafe!</h1>
-        <p>Allt innehåll här ligger ovanpå bakgrunden.</p>
-        <a href="home.html">Hem</a>
-        <a href="meny.html">Meny</a>
-        <a href="kontakt.html">Kontakt</a>
-        
+
  <!-- Innehåll -->
   <main id="main" tabindex="-1">
     <section id="start" class="hero">
       <div class="container hero-inner">
         <h1>Skynet Computer cafe</h1>
         <p>Vi är en ideell förening som arrangerar rymdens godsaker. Alla kan vara med – på plats eller online.</p>
-        <a class="btn primary" href="#event">Se nästa aktivitet</a>
+        <nav class="menu-buttons"><a class="btn" href="#event">Se nästa aktivitet</a></nav>
       </div>
     </section>
 
     <section id="event" class="section">
       <div class="container">
-        <h2>Kommande aktivitet</h2>
-        <article class="card">
-          <header>
-            <h3>Höstens öppet tider</h3>
-            <p class="muted">Måndag-fredag • 10:00–18:00 • </p>
-          </header>
-          <p>Anmälan för bordsplavering.</p>
-          <button class="btn secondary" data-add-todo="Anmälan: Bordsplacering">Bordsplacering</button>
-        </article>
+        <h2>Höstens öppet tider</h2>
+            <h3>Måndag-fredag • 10:00–18:00 </h3>
       </div>
     </section>
 
     <section id="shop" class="section alt">
-      <div class="container">
-        <h2>cafe</h2>
+      <div class="container"> <br>
+        <h2>Cafe</h2>
         <p class="muted">Intäkter går till NASA.</p>
         <div class="grid products" role="list">
           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -52,7 +49,7 @@
             <div class="p-16">
               <h3 class="product-title">Rymdbulle</h3>
               <p class="price" data-price="49">49 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"bulle","name":"Rymdbulle","price":49}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"bulle","name":"Rymdbulle","price":49}'>Lägg i varukorg</button>
             </div>
           </article>
 
@@ -61,7 +58,7 @@
             <div class="p-16">
               <h3 class="product-title">Chokladkaka</h3>
               <p class="price" data-price="99">99 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"kasse","name":"Chokladkaka","price":99}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"kasse","name":"Chokladkaka","price":99}'>Lägg i varukorg</button>
             </div>
           </article>
 
@@ -70,7 +67,7 @@
             <div class="p-16">
               <h3 class="product-title">Rymdglass</h3>
               <p class="price" data-price="59">59 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"glass","name":"rymdglass","price":59}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"glass","name":"rymdglass","price":59}'>Lägg i varukorg</button>
             </div>
           </article>
         </div>
@@ -86,9 +83,9 @@
           <strong id="cartTotal">0 kr</strong>
         </div>
         <div class="cart-actions">
-          <button id="checkoutBtn" class="btn primary">Till kassan (demo)</button>
-          <button id="clearCartBtn" class="btn ghost">Töm</button>
-          <button id="closeCartBtn" class="btn ghost">Stäng</button>
+          <button id="checkoutBtn" class="btn">Till kassan (demo)</button>
+          <button id="clearCartBtn" class="btn">Töm</button>
+          <button id="closeCartBtn" class="btn">Stäng</button>
         </div>
       </div>
     </aside>
@@ -102,27 +99,15 @@
             <input id="todoInput" name="todo" type="text" required minlength="2" placeholder="t.ex. Lämna elskrot på återvinningen" aria-describedby="todoHelp">
             <p id="todoHelp" class="muted">Sparas lokalt i din webbläsare.</p>
           </div>
-          <button class="btn secondary">Lägg till</button>
+          <button class="btn">Lägg till</button>
         </form>
 
         <ul id="todoList" class="todo-list"></ul>
-        <button id="clearTodosBtn" class="btn ghost">Rensa alla</button>
+        <button id="clearTodosBtn" class="btn">Rensa alla</button>
       </div>
     </section>
 
-    <section id="api" class="section alt">
-      <div class="container">
-        <h2>Hundbild från öppet API</h2>
-        <p class="muted">Hämtas från <a href="https://dog.ceo/dog-api/" target="_blank" rel="noopener">dog.ceo</a>.</p>
-        <div class="api-area">
-          <figure class="card api-card">
-            <img id="dogImage" src="" alt="Slumpad hund" />
-            <figcaption id="apiStatus" class="muted" aria-live="polite">Tryck på knappen för att ladda en bild.</figcaption>
-          </figure>
-          <button id="loadDogBtn" class="btn primary">Ladda hundbild</button>
-        </div>
-      </div>
-    </section>
+
 
     <section id="feedback" class="section">
       <div class="container">
@@ -157,8 +142,8 @@
           </fieldset>
 
           <div class="actions">
-            <button class="btn primary" type="submit">Skicka</button>
-            <button class="btn ghost" type="reset">Rensa</button>
+            <button class="btn" type="submit">Skicka</button>
+            <button class="btn" type="reset">Rensa</button>
           </div>
 
           <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
@@ -167,11 +152,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Gröna Gatan. <a href="#feedback">Kontakta oss</a>.</p>
-    </div>
-  </footer>
+
 
     </div>
 

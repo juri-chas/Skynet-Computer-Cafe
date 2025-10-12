@@ -33,12 +33,11 @@
     </script>
     <script src="blurryLoading.js"></script>
 
-        <div button="center-box">
-        <a href="home.html">Hem</a></div>
-        <div button="center-box">
-        <a href="meny.html">Meny</a> </div>
-        <div button="center-box">
-        <a href="kontakt.html">Kontakt</a></div>
+        <nav class="menu-buttons">
+          <a href="home.html" class="btn">Hem</a>
+          <a href="meny.html" class="btn">Meny</a>
+          <a href="kontakt.html" class="btn">Kontakt</a>
+        </nav>
 
 
     <section id="shop" class="section alt">
@@ -54,7 +53,7 @@
             <div class="p-16">
               <h3 class="product-title">Rymdbulle</h3>
               <p class="price" data-price="49">49 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"bulle","name":"Rymdbulle","price":49}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"bulle","name":"Rymdbulle","price":49}'>Lägg i varukorg</button>
             </div>
           </article>
           </div>
@@ -67,7 +66,7 @@
             <div class="p-16">
               <h3 class="product-title">Chokladkaka</h3>
               <p class="price" data-price="99">99 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"kasse","name":"Chokladkaka","price":99}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"kasse","name":"Chokladkaka","price":99}'>Lägg i varukorg</button>
             </div>
           </article>
           </div>
@@ -80,7 +79,7 @@
             <div class="p-16">
               <h3 class="product-title">Rymdglass</h3>
               <p class="price" data-price="59">59 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"glass","name":"rymdglass","price":59}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"glass","name":"rymdglass","price":59}'>Lägg i varukorg</button>
             </div>
           </article>
         </div>
@@ -96,7 +95,7 @@
             <div class="p-16">
               <h3 class="product-title">Nattgib</h3>
               <p class="price" data-price="250">250kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"nattgib","name":"nattgib","price":250}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"nattgib","name":"nattgib","price":250}'>Lägg i varukorg</button>
             </div>
           </article>
         </div>
@@ -113,7 +112,7 @@
             <div class="p-16">
               <h3 class="product-title">1 timme</h3>
               <p class="price" data-price="59">59 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"1 timme","name":"1 timme","price":59}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"1 timme","name":"1 timme","price":59}'>Lägg i varukorg</button>
             </div>
           </article>
         </div>
@@ -130,7 +129,7 @@
             <div class="p-16">
               <h3 class="product-title">10h</h3>
               <p class="price" data-price="259">259 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"10h","name":"10h","price":259}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"10h","name":"10h","price":259}'>Lägg i varukorg</button>
             </div>
           </article>
         </div>
@@ -147,7 +146,7 @@
             <div class="p-16">
               <h3 class="product-title">100h</h3>
               <p class="price" data-price="1290">1290 kr</p>
-              <button class="btn add-to-cart" data-product='{"id":"100h","name":"100h","price":1290}'>Lägg i varukorg</button>
+              <button class="btn" data-product='{"id":"100h","name":"100h","price":1290}'>Lägg i varukorg</button>
             </div>
           </article>
         </div>
@@ -164,9 +163,9 @@
           <strong id="cartTotal">0 kr</strong>
         </div>
         <div class="cart-actions">
-          <button id="checkoutBtn" class="btn primary">Till kassan (demo)</button>
-          <button id="clearCartBtn" class="btn ghost">Töm</button>
-          <button id="closeCartBtn" class="btn ghost">Stäng</button>
+          <button id="checkoutBtn" class="btn">Till kassan (demo)</button>
+          <button id="clearCartBtn" class="btn">Töm</button>
+          <button id="closeCartBtn" class="btn">Stäng</button>
         </div>
       </div>
     </aside>
@@ -180,11 +179,11 @@
             <input id="todoInput" name="todo" type="text" required minlength="2" placeholder="t.ex. Lämna elskrot på återvinningen" aria-describedby="todoHelp">
             <p id="todoHelp" class="muted">Sparas lokalt i din webbläsare.</p>
           </div>
-          <button class="btn secondary">Lägg till</button>
+          <button class="btn">Lägg till</button>
         </form>
 
         <ul id="todoList" class="todo-list"></ul>
-        <button id="clearTodosBtn" class="btn ghost">Rensa alla</button>
+        <button id="clearTodosBtn" class="btn">Rensa alla</button>
       </div>
     </section>
 

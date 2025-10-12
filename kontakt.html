@@ -1,121 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>Skynet Computer Cafe</title>
+    <title>Skynet Computer Cafe – Kontakt</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="menu-page">
 
-    <!-- Centrerad ruta med frosted glass och iframe -->
-    <div class="center-box">
-        <div class="frosted-bg"></div>
-        <h1 id="welcome-title">Välkommen till Skynet Computer Cafe!</h1>
-        <p>Allt innehåll här ligger ovanpå bakgrunden.</p>
-        <a href="home.html">Hem</a>
-        <a href="meny.html">Meny</a>
-        <a href="kontakt.html">Kontakt</a>
-
-        
-<section id="feedback" class="section">
-      <div class="container">
-        <h2>Feedback</h2>
-        <p>Berätta vad du tycker. Fält markerade med * är obligatoriska.</p>
-        <form id="feedbackForm" class="feedback-form" novalidate>
-          <div class="field">
-            <label for="name">Namn *</label>
-            <input id="name" name="name" type="text" required minlength="2" autocomplete="name">
-          </div>
-
-          <div class="field">
-            <label for="email">E-post *</label>
-            <input id="email" name="email" type="email" required inputmode="email" autocomplete="email">
-          </div>
-
-          <div class="field">
-            <label for="message">Meddelande *</label>
-            <textarea id="message" name="message" required minlength="10" rows="5"></textarea>
-          </div>
-
-          <fieldset class="field">
-            <legend>Prenumerera på nyheter?</legend>
-            <div class="choice">
-              <input type="radio" id="subYes" name="subscribe" value="yes">
-              <label for="subYes">Ja tack</label>
-            </div>
-            <div class="choice">
-              <input type="radio" id="subNo" name="subscribe" value="no" checked>
-              <label for="subNo">Nej</label>
-            </div>
-          </fieldset>
-
-          <div class="actions">
-            <button class="btn primary" type="submit">Skicka</button>
-            <button class="btn ghost" type="reset">Rensa</button>
-          </div>
-
-          <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Skynet Computer cafe. <a href="#feedback">Kontakta oss</a>.</p>
-    </div>
-  </footer>
-
-    </div>
-
-    <!-- Blurry Loading -->
+    <!-- Bakgrund -->
     <section class="bg">
         <canvas id="backgroundCanvas"></canvas>
         <canvas id="starsCanvas"></canvas>
         <canvas id="milkyWayCanvas"></canvas>
     </section>
-    <div class="loading-text">0%</div>
 
-    <!-- Scripts -->
-    <script src="spaceBackground.js" id="spaceScript"></script>
-    <script>
-      const DELAY_MS = 1000;
-      document.getElementById('spaceScript').addEventListener('load', function () {
-        setTimeout(function () {
-          var s = document.createElement('script');
-          s.src = 'blurryLoading.js';
-          document.body.appendChild(s);
-        }, DELAY_MS);
-      });
-    </script>
+    
+
+    <!-- Knappar -->
+        <nav class="menu-buttons">
+          <a href="home.html" class="btn">Hem</a>
+          <a href="meny.html" class="btn">Meny</a>
+          <a href="kontakt.html" class="btn">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- Centrerad ruta med frosted glass -->
+    <div class="center-box">
+        <h1>Kontakt</h1>
+        <p>Fyll i formuläret nedan för att kontakta oss. Fält markerade med * är obligatoriska.</p>
+
+        <form id="feedbackForm" novalidate>
+            <div class="field">
+                <label for="name">Namn *</label>
+                <input type="text" id="name" name="name" required minlength="2" autocomplete="name">
+            </div>
+
+            <div class="field">
+                <label for="email">E-post *</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="field">
+                <label for="message">Meddelande *</label>
+                <textarea id="message" name="message" required minlength="10" rows="5"></textarea>
+            </div>
+
+            <fieldset class="field">
+                <legend>Prenumerera på nyheter?</legend>
+                <div class="choice">
+                    <input type="radio" id="subYes" name="subscribe" value="yes">
+                    <label for="subYes">Ja tack</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="subNo" name="subscribe" value="no" checked>
+                    <label for="subNo">Nej</label>
+                </div>
+            </fieldset>
+
+            <div class="actions">
+              <nav class="menu-buttons">
+                <button type="submit" class="btn">Skicka</button>
+                <button type="reset" class="btn">Rensa</button></nav>
+            </div>
+
+            <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+        </form>
+
+    <!-- Scripts för rymdbakgrund -->
+    <script src="spaceBackground.js"></script>
     <script src="blurryLoading.js"></script>
-
-
-
-#contactForm {
-  max-width: 400px;
-  margin: 0 auto;
-}
-.field {
-  margin-bottom: 15px;
-}
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-#statusMessage {
-  margin-top: 10px;
-  font-size: 1rem;
-}
-
 
 </body>
 </html>
